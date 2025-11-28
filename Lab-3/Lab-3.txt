@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+     {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    background: #f7f9fc;
+    color: #333;
+}
+
+section {
+    padding: 4rem 8%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* ==== Color Theme ==== */
+:root {
+    --primary: #6C63FF;
+    --secondary: #FF6584;
+    --dark: #222;
+}
+
+/* ==== Header ==== */
+.header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+/* ==== Hero Section ==== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.animate-role {
+    font-size: 1.5rem;
+    animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: var(--primary); }
+    100% { color: var(--secondary); }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 20px;
+}
+
+/* ==== Buttons ==== */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* ==== Skills Grid ==== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1.2rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ==== Projects Grid ==== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+/* ==== Contact Form ==== */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 140px;
+}
+
+/* ==== Footer ==== */
+.footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.footer .socials a {
+    color: var(--secondary);
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+/* ==== Responsive Design ==== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+}
+</style>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <div class="logo">MyPortfolio</div>
+        <nav class="nav">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <h1 class="fade-in">Hi, I'm <span class="highlight">Tofik ahmed</span></h1>
+            <h2 class="animate-role">Full Stack Developer</h2>
+            <p>I build responsive and modern websites using HTML, CSS, and JavaScript.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="your-image.png" alt="Profile Photo">
+        </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a passionate developer who enjoys creating clean and responsive websites.
+            I specialize in front-end and have strong interest in animations and UI design.
+        </p>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-grid">
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">React</div>
+            <div class="card">Node.js</div>
+            <div class="card">Git & GitHub</div>
+        </div>
+    </section>
+
+    <!-- ===== Projects Section ===== -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A sample project description goes here.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>This project demonstrates responsive layout design.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>A simple app created using HTML, CSS, and JS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Tofik ahmed" required>
+            <input type="email" placeholder="tofik1233@gmail.com" required>
+            <textarea placeholder="Write your message here..." required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <p>© 2025 Your Name. All Rights Reserved.</p>
+        <div class="socials">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+</html>
