@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub – Online Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+    --primary: #4b6bfb;
+    --secondary: #1f2430;
+    --bg: #ffffff;
+    --light: #f4f5ff;
+    --text: #333;
+    --radius: 12px;
+    --transition: all .25s ease;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    margin: 0;
+    color: var(--text);
+}
+
+/* Skip Link */
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: var(--primary);
+    padding: .5rem 1rem;
+    color: white;
+    z-index: 100;
+    transition: var(--transition);
+}
+.skip:focus {
+    top: 10px;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: var(--light);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    transition: var(--transition);
+}
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* -------------------- HERO -------------------- */
+.hero {
+    background: url("images/hero.jpg") center/cover no-repeat;
+    padding: 8rem 3rem;
+    color: white;
+    text-align: center;
+
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------- SECTIONS -------------------- */
+.section {
+    padding: 4rem 3rem;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* -------------------- GRID -------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* -------------------- CARDS -------------------- */
+.card {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: .7rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.card button:hover {
+    opacity: .8;
+}
+
+/* Testimonials */
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Pricing */
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* -------------------- FORM -------------------- */
+.contact-form {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: .8rem;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background: var(--secondary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+.social a {
+    margin: 0 .5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .hero {
+        padding: 5rem 1rem;
+    }
+}
+</style>
+
+<body>
+
+<!-- Skip Link -->
+<a href="#main-content" class="skip">Skip to main content</a>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">LearnHub</div>
+    <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Upgrade Your Skills With Expert-led Online Courses</h1>
+        <p>Learn anytime, anywhere — at your own pace.</p>
+        <button class="cta-btn">Start Learning</button>
+    </div>
+</section>
+
+<main id="main-content">
+
+<!-- COURSES SECTION -->
+<section id="courses" class="section">
+    <h2 class="section-title">Popular Courses</h2>
+
+    <div class="grid">
+        <article class="card">
+            <img src="images/course1.jpg" alt="Web Development Course">
+            <h3>Web Development Bootcamp</h3>
+            <p>Learn HTML, CSS, JavaScript, and modern frameworks.</p>
+            <button>Enroll Now</button>
+        </article>
+
+        <article class="card">
+            <img src="images/course2.jpg" alt="UI/UX Design Course">
+            <h3>UI/UX Design Essentials</h3>
+            <p>Master wireframing, prototyping, and visual design.</p>
+            <button>Enroll Now</button>
+        </article>
+
+        <article class="card">
+            <img src="images/course3.jpg" alt="Data Science Course">
+            <h3>Data Science With Python</h3>
+            <p>Data analysis, visualizations, and machine learning.</p>
+            <button>Enroll Now</button>
+        </article>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+    <h2 class="section-title">What Students Say</h2>
+
+    <div class="grid">
+        <article class="card testimonial">
+            <img src="images/testimonial1.jpg" alt="Student Sarah">
+            <p>"The courses are extremely well-structured and easy to follow!"</p>
+            <h4>– Sarah Johnson</h4>
+        </article>
+
+        <article class="card testimonial">
+            <img src="images/testimonial2.jpg" alt="Student David">
+            <p>"I landed a job after completing the Web Dev Bootcamp!"</p>
+            <h4>– David Williams</h4>
+        </article>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section">
+    <h2 class="section-title">Pricing Plans</h2>
+
+    <div class="grid">
+        <article class="card">
+            <h3>Basic</h3>
+            <p class="price">$19/month</p>
+            <ul>
+                <li>Access to 10 Courses</li>
+                <li>Community Support</li>
+                <li>Certification</li>
+            </ul>
+            <button>Choose Plan</button>
+        </article>
+
+        <article class="card">
+            <h3>Pro</h3>
+            <p class="price">$39/month</p>
+            <ul>
+                <li>Access to 50+ Courses</li>
+                <li>Priority Support</li>
+                <li>Certificates + Projects</li>
+            </ul>
+            <button>Choose Plan</button>
+        </article>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" class="section">
+    <h2 class="section-title">Contact Us</h2>
+
+    <form class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+
+        <label for="msg">Message</label>
+        <textarea id="msg" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 LearnHub. All rights reserved.</p>
+    <div class="social">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+    </div>
+</footer>
+
+</body>
+</html>
